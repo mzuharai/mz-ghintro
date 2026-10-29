@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A little introduction to me, my interests, and what I enjoy.">
+  <title>My Introduction</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #20302b;
+      --muted: #52635c;
+      --paper: #fffaf0;
+      --green: #245c4b;
+      --green-light: #dcece1;
+      --coral: #e8795d;
+      --yellow: #f2c65d;
+      --line: #dedfd3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    .page {
+      width: min(100% - 32px, 960px);
+      margin: 0 auto;
+      padding: 28px 0 36px;
+    }
+
+    .topline {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 4px 0 20px;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .topline strong {
+      color: var(--green);
+      font-weight: 700;
+    }
+
+    main {
+      padding-top: 40px;
+    }
+
+    .intro {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 7vw, 68px);
+      border-radius: 12px;
+      background: var(--green-light);
+    }
+
+    .intro::after {
+      position: absolute;
+      top: -50px;
+      right: -34px;
+      width: 180px;
+      height: 180px;
+      border: 24px solid rgba(232, 121, 93, 0.35);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--green);
+      font-size: 0.82rem;
+      font-weight: 750;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: 600;
+      line-height: 1.15;
+    }
+
+    h1 {
+      max-width: 650px;
+      margin: 0;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+    }
+
+    h1 span {
+      color: var(--green);
+    }
+
+    .summary {
+      max-width: 560px;
+      margin: 20px 0 0;
+      color: #344840;
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+    }
+
+    .sections {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 44px;
+      padding: 40px 8px 0;
+    }
+
+    section {
+      padding-top: 18px;
+      border-top: 2px solid var(--line);
+    }
+
+    section h2 {
+      margin: 0 0 10px;
+      font-size: 1.55rem;
+    }
+
+    section p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .interest-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 15px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .interest-list li {
+      padding: 5px 12px;
+      border: 1px solid #e8d8a8;
+      border-radius: 999px;
+      background: #fff2c9;
+      color: #5e4d22;
+      font-size: 0.9rem;
+    }
+
+    .note {
+      margin-top: 38px;
+      padding: 16px 20px;
+      border-left: 4px solid var(--coral);
+      background: #fff0e8;
+      color: #604437;
+    }
+
+    footer {
+      margin-top: 38px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    @media (max-width: 620px) {
+      .page {
+        width: min(100% - 24px, 960px);
+        padding-top: 16px;
+      }
+
+      main {
+        padding-top: 24px;
+      }
+
+      .intro::after {
+        top: -66px;
+        right: -86px;
+      }
+
+      .sections {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 30px 4px 0;
+      }
+
+      .topline {
+        font-size: 0.82rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="topline">
+      <strong>A little about me</strong>
+      <span>Welcome to my page</span>
+    </header>
+
+    <main>
+      <div class="intro">
+        <p class="eyebrow">Hello, nice to meet you</p>
+        <h1>Hi, I'm <span>Your Name</span>.</h1>
+        <p class="summary">I'm a curious person who enjoys learning, trying new things, and spending time on what matters to me.</p>
+      </div>
+
+      <div class="sections">
+        <section aria-labelledby="about-title">
+          <h2 id="about-title">A little about me</h2>
+          <p>Write a short introduction here. You could share what you do, what you are learning, or something you care about.</p>
+        </section>
+
+        <section aria-labelledby="interests-title">
+          <h2 id="interests-title">Things I enjoy</h2>
+          <p>Add a few hobbies or interests. Here are some examples to replace:</p>
+          <ul class="interest-list">
+            <li>Reading</li>
+            <li>Music</li>
+            <li>Being outdoors</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="more-title">
+          <h2 id="more-title">A fun fact</h2>
+          <p>Share a favorite place, a goal, a fun fact, or anything else you would like people to know.</p>
+        </section>
+
+        <section aria-labelledby="thanks-title">
+          <h2 id="thanks-title">Thanks for visiting</h2>
+          <p>This little page is a work in progress. I hope you have a lovely day!</p>
+        </section>
+      </div>
+
+      <aside class="note">Tip: Replace the example text with your own words. You can also remove any section you do not need.</aside>
+    </main>
+
+    <footer>Made with care</footer>
+  </div>
+</body>
+</html>
